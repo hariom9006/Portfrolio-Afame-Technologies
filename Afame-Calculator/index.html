@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SmartCalc | Modern Calculator</title>
+
+    <meta name="description"
+        content="A modern responsive calculator with keyboard support and calculation history.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="app-container">
+
+        <!-- Header -->
+        <header class="header">
+            <a href="#" class="logo">
+                Smart<span>Calc.</span>
+            </a>
+
+            <span class="header-label">MODERN CALCULATOR</span>
+        </header>
+
+
+        <!-- Main Calculator Layout -->
+        <section class="calculator-layout">
+
+            <!-- Calculator -->
+            <div class="calculator">
+
+                <div class="calculator-top">
+                    <div>
+                        <span class="small-label">CALCULATOR</span>
+                        <h1>Calculate anything.</h1>
+                    </div>
+
+                    <div class="status-dot"></div>
+                </div>
+
+
+                <!-- Display -->
+                <div class="display">
+
+                    <div class="previous-expression" id="previousExpression">
+                        Ready to calculate
+                    </div>
+
+                    <input
+                        type="text"
+                        id="display"
+                        class="display-input"
+                        value="0"
+                        readonly
+                        aria-label="Calculator display"
+                    >
+
+                </div>
+
+
+                <!-- Calculator Buttons -->
+                <div class="buttons-grid">
+
+                    <button class="btn function-btn" data-action="clear">
+                        AC
+                    </button>
+
+                    <button class="btn function-btn" data-action="delete">
+                        DEL
+                    </button>
+
+                    <button class="btn function-btn" data-action="percent">
+                        %
+                    </button>
+
+                    <button class="btn operator-btn" data-value="/">
+                        ÷
+                    </button>
+
+
+                    <button class="btn" data-value="7">7</button>
+                    <button class="btn" data-value="8">8</button>
+                    <button class="btn" data-value="9">9</button>
+                    <button class="btn operator-btn" data-value="*">×</button>
+
+
+                    <button class="btn" data-value="4">4</button>
+                    <button class="btn" data-value="5">5</button>
+                    <button class="btn" data-value="6">6</button>
+                    <button class="btn operator-btn" data-value="-">−</button>
+
+
+                    <button class="btn" data-value="1">1</button>
+                    <button class="btn" data-value="2">2</button>
+                    <button class="btn" data-value="3">3</button>
+                    <button class="btn operator-btn" data-value="+">+</button>
+
+
+                    <button class="btn zero-btn" data-value="0">0</button>
+                    <button class="btn" data-value=".">.</button>
+
+                    <button class="btn equal-btn" data-action="calculate">
+                        =
+                    </button>
+
+                </div>
+
+
+                <div class="keyboard-note">
+                    TIP: You can also use your keyboard to calculate.
+                </div>
+
+            </div>
+
+
+            <!-- History Panel -->
+            <aside class="history-panel">
+
+                <div class="history-header">
+                    <div>
+                        <span class="small-label">YOUR ACTIVITY</span>
+                        <h2>History</h2>
+                    </div>
+
+                    <button id="clearHistory" class="clear-history">
+                        Clear
+                    </button>
+                </div>
+
+
+                <div id="historyList" class="history-list">
+
+                    <div class="empty-history">
+                        <div class="history-icon">◷</div>
+                        <p>No calculations yet</p>
+                        <span>Your results will appear here.</span>
+                    </div>
+
+                </div>
+
+                <div class="history-footer">
+                    <span>SMARTCALC</span>
+                    <span>v1.0</span>
+                </div>
+
+            </aside>
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>
+                © <span id="year"></span> SmartCalc.
+                Designed & Developed by Hariom Anand.
+            </p>
+        </footer>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
